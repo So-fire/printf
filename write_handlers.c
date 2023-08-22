@@ -1,13 +1,14 @@
 #include "main.h"
 
+/************************* WRITE HANDLE *************************/
 /**
  * handle_write_char - Prints a string
- * @c: char 
- * @buffer: Buffer
- * @flags:  Calculate flags.
- * @width: get width
+ * @c: char types.
+ * @buffer: Buffer array to handle print
+ * @flags:  Calculates active flags.
+ * @width: get width.
  * @precision: precision specifier
- * @size: Size
+ * @size: Size specifier
  *
  * Return: Number of chars printed.
  */
@@ -249,4 +250,3 @@ int write_pointer(char buffer[], int ind, int length,
 		buffer[--ind] = extra_c;
 	return (write(1, &buffer[ind], BUFF_SIZE - ind - 1));
 }
-
